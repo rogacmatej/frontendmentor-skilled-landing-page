@@ -1,0 +1,87 @@
+@use '../abstracts' as *;
+
+@font-face {
+  font-family: 'PlusJakartaSans';
+  font-weight: 500;
+  src: url(/fonts/static/PlusJakartaSans-Medium.ttf) format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PlusJakartaSans';
+  font-weight: 700;
+  src: url(/fonts/static/PlusJakartaSans-Bold.ttf) format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PlusJakartaSans';
+  font-weight: 800;
+  src: url(/fonts/static/PlusJakartaSans-ExtraBold.ttf) format('truetype');
+  font-display: swap;
+}
+
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: 'PlusJakartaSans';
+    font-weight: 400 900;
+    font-stretch: 75 100;
+    src: url(../fonts/PlusJakartaSans-VariableFont_wght.ttf) format('truetype');
+    font-display: swap;
+  }
+}
+
+body {
+  font-family: var(--ff-body);
+  font-size: 1.8rem;
+  font-weight: var(--fw-regular);
+  line-height: 2.8rem;
+  color: hsl(var(--clr-slate-200));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-bold);
+  color: hsl(var(--clr-slate-600));
+}
+
+h1 {
+  font-size: 5.6rem;
+  line-height: normal;
+}
+
+h2 {
+  font-size: 4rem;
+  line-height: normal;
+}
+
+h3 {
+  font-size: 3.2rem;
+  line-height: 4rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+  line-height: normal;
+}
+
+p + p {
+  margin-bottom: 1.5rem;
+}
+
+@include media-breakpoint-down(lg) {
+  body {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    line-height: normal;
+  }
+}

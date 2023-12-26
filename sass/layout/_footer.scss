@@ -1,0 +1,12 @@
+@use '../abstracts/variables';
+
+.footer {
+  padding-block: 3.2rem;
+  background-color: hsl(var(--clr-slate-600));
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,75 @@
+@use '../abstracts/variables';
+
+.btn {
+  display: inline-flex;
+  flex-shrink: 0;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.4rem 3.2rem;
+  border: none;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.8rem;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled,
+  &.disabled {
+    cursor: not-allowed;
+  }
+
+  &__primary {
+    &,
+    &:link,
+    &:visited {
+      background: hsl(var(--clr-slate-600));
+      color: hsl(var(--clr-neutral-100));
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      background: hsl(var(--clr-slate-400));
+    }
+  }
+
+  &__secondary {
+    &,
+    &:link,
+    &:visited {
+      background: var(--lg-orange-to-pink);
+      color: hsl(var(--clr-neutral-100));
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      background: var(--lg-neutral), var(--lg-orange-to-pink);
+    }
+  }
+
+  &__tertiary {
+    &,
+    &:link,
+    &:visited {
+      background: var(--lg-blue-to-pink);
+      color: hsl(var(--clr-neutral-100));
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      background: var(--lg-neutral), var(--lg-blue-to-pink);
+    }
+  }
+
+  &--rounded {
+    border-radius: 2.8rem;
+  }
+}
